@@ -7,7 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.sid.bilingservice.model.Product;
 
 @Entity @Data
 @NoArgsConstructor @AllArgsConstructor @Builder
@@ -22,5 +21,5 @@ public class ProductItem {
     private double price;
     private double discount;
     @Transient
-    private Product product;
+    private ProductItem product;
 }

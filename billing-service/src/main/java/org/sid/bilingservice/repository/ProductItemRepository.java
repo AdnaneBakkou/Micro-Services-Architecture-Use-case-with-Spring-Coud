@@ -1,6 +1,6 @@
 package org.sid.bilingservice.repository;
 
-import org.sid.bilingservice.entities.Bill;
+
 import org.sid.bilingservice.entities.ProductItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 
