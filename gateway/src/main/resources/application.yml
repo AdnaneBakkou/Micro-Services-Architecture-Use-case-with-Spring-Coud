@@ -1,4 +1,4 @@
-server:
+server :
   port: 8888
 spring:
   application:
@@ -6,14 +6,15 @@ spring:
   cloud:
     discovery:
       enabled: true
-   # gateway:
-        #  routes:
-        #- id: r1
-        # uri : http://localhost:8082
-        # predicates:
-        #   - Path= /customers/**
-
-        #- id: r2
-        # uri: http://localhost:8081
-        # predicates:
-      #    - Path= /products/**
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://localhost:4200"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
